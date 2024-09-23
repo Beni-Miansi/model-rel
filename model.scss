@@ -1,0 +1,13 @@
+Hotel(HotelID, Nom, Adresse)
+
+Client(ClientID, Nom, Prenom, Adresse)
+
+Reservation(ReservationID, ClientID, DateDebut, DateFin)
+   - ClientID → Client(ClientID)
+
+Chambre(ChambreID, NumChambre, Type, Prix, HotelID)
+   - HotelID → Hotel(HotelID)
+
+Reservation_Chambre(ReservationID, ChambreID)
+   - ReservationID → Reservation(ReservationID)
+   - ChambreID → Chambre(ChambreID)
